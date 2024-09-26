@@ -1,0 +1,3 @@
+aumentar los datos personales
+complementar la formacion con fecha y centros de estudios, añadiendo cursos.
+centrar imagen.
