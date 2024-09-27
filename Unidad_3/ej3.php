@@ -1,3 +1,10 @@
+<?php
+//Carga fecha de nacimiento en variables y calcula la edad.
+
+// Variables.
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +14,6 @@
 </head>
 <body>
 <?php
-//Carga fecha de nacimiento en variables y calcula la edad.
-
 
 
 ?>

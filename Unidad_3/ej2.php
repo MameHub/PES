@@ -1,3 +1,12 @@
+<?php
+// Carga en variables mes y año e indica el número de días del mes. Utiliza la estructura de control switch.
+
+// Variables
+$mes = 9;
+$anno = 2024;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +16,14 @@
 </head>
 <body>
 <?php
-// Carga en variables mes y año e indica el número de días del mes. Utiliza la estructura de control switch.
-
-// Variables
-$mes = 9;
-$anno = 2024;
-
-switch(mes) {
+switch($mes) {
 
     case 1:
         print"Enero tiene 31 días.";
     break;
 
     case 2:
-        if(anno % 4 == 0) {
+        if($anno % 4 == 0) {
             print"Febrero tiene 29 días.";
         } else {
             print"Febrero tiene 28 días.";
@@ -69,9 +72,7 @@ switch(mes) {
 
     default:
         print"ERROR.";
-
 };
-
 ?>
 </body>
 </html>

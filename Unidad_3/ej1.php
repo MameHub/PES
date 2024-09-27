@@ -1,3 +1,12 @@
+<?php
+// Almacena tres números en variables y escribirlos en pantalla de manera ordenada.
+
+// Variables.
+$a = 1;
+$b = 2;
+$c = 3;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,16 +17,9 @@
 <body>
 
 <?php
-// Almacena tres números en variables y escribirlos en pantalla de manera ordenada.
+if ($a > $b) {
 
-// Variables.
-$a = 3;
-$b = 7;
-$c = 9;
-
-if ($a > $b & $c) {
-
-    if ($b > $c) {
+    if ($a > $c) {
 
         echo"$a, $b, $c";
 
@@ -27,27 +29,27 @@ if ($a > $b & $c) {
 
     }
 
-} else if ($b > $a & $c) {
+} else if ($b > $a) {
 
-    if ($a > $c) {
+    if ($b > $c) {
 
         echo"$b, $a, $c";
 
     } else {
 
-        echo"$b, $c, $a";
+        echo"$b, $a, $b";
 
     }
 
-} else if ($c > $a & $b) {
+} else if ($c > $a) {
 
-    if ($a > $b) {
+    if ($c > $b) {
 
-        echo"$c, $a, $b";
+        echo"$c, $b, $c";
 
     } else {
 
-        echo"$c, $b, $a";
+        echo"$a, $c, $b";
 
     }
 
@@ -56,7 +58,6 @@ if ($a > $b & $c) {
     echo "ERROR.";
 
 };
-
 ?>
 
 </body>
