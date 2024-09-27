@@ -17,47 +17,9 @@ $c = 3;
 <body>
 
 <?php
-if ($a > $b) {
-
-    if ($a > $c) {
-
-        echo"$a, $b, $c";
-
-    } else {
-
-        echo"$a, $c, $b";
-
-    }
-
-} else if ($b > $a) {
-
-    if ($b > $c) {
-
-        echo"$b, $a, $c";
-
-    } else {
-
-        echo"$b, $a, $b";
-
-    }
-
-} else if ($c > $a) {
-
-    if ($c > $b) {
-
-        echo"$c, $b, $c";
-
-    } else {
-
-        echo"$a, $c, $b";
-
-    }
-
-} else {
-
-    echo "ERROR.";
-
-};
+if () {
+    
+}
 ?>
 
 </body>
