@@ -27,7 +27,7 @@ switch($mes) {
             print"Febrero tiene 29 días.";
         } else {
             print"Febrero tiene 28 días.";
-        }
+        };
     break;
 
     case 3:
