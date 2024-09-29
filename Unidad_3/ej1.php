@@ -2,9 +2,9 @@
 // Almacena tres números en variables y escribirlos en pantalla de manera ordenada.
 
 // Variables.
-$a = 1;
-$b = 2;
-$c = 3;
+$a = 2;
+$b = 3;
+$c = 1;
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +17,28 @@ $c = 3;
 <body>
 
 <?php
-if () {
-    
+if ($a >= $b) {
+    if ($a >= $c) {
+        if ($b >= $c) {
+            echo "$a > $b > $c";
+        } else {
+            echo "$a > $c > $b";
+        }
+    } else if ($b >= $c) {
+        echo "$c > $b > $a";
+    } else {
+        echo "$c > $a > $b";
+    }
+} else if ($b >= $c) {
+    if ($c >= $a) {
+        echo "$b > $c > $a";
+    } else {
+        echo "$b > $a > $c";
+    }
+} else if ($c >= $a) {
+    if ($c >= $b) {
+        echo "$c > $b > $a";
+    }
 }
 ?>
 
