@@ -2,7 +2,21 @@
 //Carga fecha de nacimiento en variables y calcula la edad.
 
 // Variables.
+$diaNacimiento = 8;
+$mesNacimiento = 6;
+$annoNacimiento = 1997;
+$diaActual = date("d");
+$mesActual = date("m");
+$annoActual = date("Y");
+$edadActual;
 
+// Calculo edad.
+$edadActual = $annoActual - $annoNacimiento;
+
+// Ajuste edad.
+if ($mesActual < $mesNacimiento || ($mesActual == $mesNacimiento && $diaActual < $diaNacimiento)) {
+    $edad--;
+};
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +28,7 @@
 </head>
 <body>
 <?php
-
-
+echo "Tu edad actual es de $edadActual años.";
 ?>
 </body>
 </html>
