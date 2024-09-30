@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +7,12 @@
 </head>
 <body>
     <p>
-
+    Escribir los números 1 al 10.
     </p>
 <?php
-
+    for ($i = 1; $i<=10; $i++){
+        echo "$i ";
+    };
 ?>
 </body>
 </html>
