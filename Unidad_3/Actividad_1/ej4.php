@@ -24,7 +24,7 @@ $hora = date("G");
 <!--
     Primavera: 20 marzo - 21 junio
     Verano: 21 junio - 23 septiembre
-    Otoño: 23 marzo - 21 diciembre
+    Otoño: 23 septiembre - 21 diciembre
     Invierno: 21 diciembre - 20 marzo
 -->
     <div class="cabecera">
