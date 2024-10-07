@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 3</title>
+    <title>Ejercicio 1</title>
 </head>
 <body>
+    <p>
+    Escribir los números 1 al 10.
+    </p>
 <?php
-//Carga fecha de nacimiento en variables y calcula la edad.
-
-
-
+    for ($i = 1; $i<=10; $i++){
+        echo "$i ";
+    };
 ?>
 </body>
 </html>
