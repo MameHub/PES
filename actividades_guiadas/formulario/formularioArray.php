@@ -21,7 +21,7 @@ if ($lProcesaFormulario) {
     echo "<br/>";
     echo "email: $email";
 
-} else {
+} else {}
 
 ?>
 <!DOCTYPE html>
