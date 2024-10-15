@@ -5,7 +5,7 @@
 Ejercicio 1. Número positivo o negativo:
     Escribe un Script que verifique si un número es positivo, negativo o cero.
 */
-$number = -3;
+$number = 3;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -18,8 +18,7 @@ $number = -3;
     <?php
     if ($number > 0) {
         echo "El número es positivo ($number).";
-    }
-    elseif ($number < 0) {
+    } elseif ($number < 0) {
         echo "El número es negativo ($number).";
     } else {
         echo "El número es 0.";
