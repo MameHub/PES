@@ -44,5 +44,7 @@ $diaSemana = 4;
             break;
     }
     ?>
+    <br/>
+    <a href="https://github.com/MameHub/PES/blob/main/ejercicios_basicos/1_condiciones/ej4.php">Ejercicio en GitHub</a>
 </body>
 </html>

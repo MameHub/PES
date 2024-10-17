@@ -22,5 +22,7 @@ Ejercicio 1. Imprimir números del 1 al 100:
     }
 
     ?>
+    <br/>
+    <a href="https://github.com/MameHub/PES/blob/main/ejercicios_basicos/2_bucles/ej1.php">Ejercicio en GitHub</a>
 </body>
 </html>

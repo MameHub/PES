@@ -46,5 +46,7 @@ $c = 9;
     }
     
     ?>
+    <br/>
+    <a href="https://github.com/MameHub/PES/blob/main/ejercicios_basicos/1_condiciones/ej2.php">Ejercicio en GitHub</a>
 </body>
 </html>
