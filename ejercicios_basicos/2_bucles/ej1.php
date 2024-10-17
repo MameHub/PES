@@ -17,6 +17,10 @@ Ejercicio 1. Imprimir números del 1 al 100:
 <body>
     <?php
     
+    for ($i=0; $i <= 100; $i++) { 
+        echo "$i ";
+    }
+
     ?>
 </body>
 </html>
