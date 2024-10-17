@@ -6,29 +6,29 @@
 
 // Creamos la cookie si no esta creada.
 if (!isset($_COOKIE["usuario"])) {
-    setcookie("usuario","", time() + 3600);
+    setcookie("usuario","Datos usuario", time() + 3600);
 }
 
+// Validamos el formulario.
 $lProcesaFormulario = false;
 if(isset($_POST['enviar'])){
     $lProcesaFormulario = true;
 }
 
+// Procesamos el formulario.
 if ($lProcesaFormulario) {
 
-    $nombre = $_POST['nombre'];
-    $apellidos = $_POST['apellidos'];
-    $email = $_POST['email'];
+    $usuario = $_POST['usuario'];
+    $password = $_POST['password'];
+    $recCon = $_POST['recCon'];
 
-    if (!FILTER_VAR(value:$email, filter:FILTER_VALIDATE_EMAIL)) {
-        $lProcesaFormulario = false;
+    if ($recCon) {
+        $vUsuario = $usuario;
+        $vPassword = $password;
+    } else {
+        $vUsuario = "usuario";
+        $vPassword = "contraseña";
     }
-
-    echo "Nombre: $nombre";
-    echo "<br/>";
-    echo "apellidos: $apellidos";
-    echo "<br/>";
-    echo "email: $email";
 
 }
 
@@ -43,17 +43,21 @@ if ($lProcesaFormulario) {
 </head>
 <body>
 
+    <?php
+    if($lProcesaFormulario) {
+        echo "<input type='text' id='usuario' placeholder='usuario'>";
+        echo "<input type='text' id='usuario' placeholder='usuario'>";
+    }
+    ?>
+
+    <!-- Lo procesamos en el mismo documento. -->
     <form action="" method="post">
-        <input type="text" placeholder="usuario">
-        <input type="password" placeholder="contraseña">
+        <input type="text" id="usuario" placeholder="usuario" value="<?php echo "$vUsuario"; ?>">
+        <input type="password" id="password" placeholder="contraseña" value="<?php echo "$vPassword"; ?>">
         <input type="checkbox" id="recCon" name="recCon">
         <label for="recCon">Recordar contrasña</label><br>
         <input type="submit" value="enviar">
     </form>
-
-    <?php
-    
-    ?>
 
 <br/>
 <a href='https://github.com/MameHub/PES/blob/main/unidad_4/actividades_clase/ej3.php'>Ejercicio en GitHub</a>
