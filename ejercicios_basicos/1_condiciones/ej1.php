@@ -24,5 +24,7 @@ $number = 3;
         echo "El número es 0.";
     }
     ?>
+    <br/>
+    <a href="https://github.com/MameHub/PES/blob/main/ejercicios_basicos/1_condiciones/ej1.php">Ejercicio en GitHub</a>
 </body>
 </html>
