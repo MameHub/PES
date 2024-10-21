@@ -6,6 +6,8 @@ Ejercicio 2. Suma de los primeros 50 números:
     Calcula la suma de los primeros 50 números naturales usando un bucle while.
 */
 
+$i = 0;
+$number = 0;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,7 +18,11 @@ Ejercicio 2. Suma de los primeros 50 números:
 </head>
 <body>
     <?php
-    
+    while ($i < 50) {
+        $i++;
+        $number += $number;
+    }
+    echo $number;
     ?>
     <br/>
     <a href="https://github.com/MameHub/PES/blob/main/ejercicios_basicos/2_bucles/ej2.php">Ejercicio en GitHub</a>
