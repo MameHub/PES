@@ -6,7 +6,6 @@ Ejercicio 2. Suma de los primeros 50 números:
     Calcula la suma de los primeros 50 números naturales usando un bucle while.
 */
 
-$i = 1;
 $number = 0;
 ?>
 <!DOCTYPE html>
@@ -18,9 +17,8 @@ $number = 0;
 </head>
 <body>
     <?php
-    while ($i < 50) {
-        $i++;
-        $number += $number;
+    for ($i = 0; $i <= 50; $i++) { 
+        $number += $i;
     }
     echo $number;
     ?>
