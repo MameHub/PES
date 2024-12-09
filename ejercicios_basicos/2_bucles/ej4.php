@@ -26,6 +26,6 @@ $number = 1;
     }
     ?>
     <br/>
-    <a href="https://github.com/MameHub/PES/blob/main/ejercicios_basicos/2_bucles/ej1.php">Ejercicio en GitHub</a>
+    <a href="https://github.com/MameHub/PES/blob/main/ejercicios_basicos/2_bucles/ej4.php">Ejercicio en GitHub</a>
 </body>
 </html>
