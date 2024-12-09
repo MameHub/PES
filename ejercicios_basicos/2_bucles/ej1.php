@@ -16,11 +16,10 @@ Ejercicio 1. Imprimir números del 1 al 100:
 </head>
 <body>
     <?php
-    
     for ($i=0; $i <= 100; $i++) { 
-        echo "$i ";
+        echo "$i";
+        echo "<br/>";
     }
-
     ?>
     <br/>
     <a href="https://github.com/MameHub/PES/blob/main/ejercicios_basicos/2_bucles/ej1.php">Ejercicio en GitHub</a>
