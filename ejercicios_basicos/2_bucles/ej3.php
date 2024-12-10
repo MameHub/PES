@@ -16,7 +16,9 @@ Ejercicio 3. Tabla de multiplicar:
 </head>
 <body>
     <?php
-    
+    for ($i = 0; $i < ; $i++) { 
+        
+    }
     ?>
     <br/>
     <a href="https://github.com/MameHub/PES/blob/main/ejercicios_basicos/2_bucles/ej3.php">Ejercicio en GitHub</a>
