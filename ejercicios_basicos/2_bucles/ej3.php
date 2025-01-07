@@ -6,6 +6,8 @@ Ejercicio 3. Tabla de multiplicar:
     Escribe un Script que muestre la tabla de multiplicar de un número dado (del 1 al 100).
 */
 
+$number = 9;
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,8 +18,9 @@ Ejercicio 3. Tabla de multiplicar:
 </head>
 <body>
     <?php
-    for ($i = 0; $i < ; $i++) { 
-        
+    for ($i = 1; $i <= 100; $i++) { 
+        echo "$number · $i = " . ($number * $i);
+        echo "<br/>";
     }
     ?>
     <br/>
