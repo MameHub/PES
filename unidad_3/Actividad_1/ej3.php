@@ -15,7 +15,7 @@ $edadActual = $annoActual - $annoNacimiento;
 
 // Ajuste edad.
 if ($mesActual < $mesNacimiento || ($mesActual == $mesNacimiento && $diaActual < $diaNacimiento)) {
-    $edad--;
+    $edadActual--;
 };
 ?>
 
