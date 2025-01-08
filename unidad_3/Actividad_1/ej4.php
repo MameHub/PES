@@ -36,7 +36,7 @@ $hora = date("G");
         <p><b>· Fecha de nacimiento:</b> 08/06/1997</p>
         <p><b>· Telefono:</b> 615586378</p>
         <div class="imagen">
-            <img src="./1709596755143.jpg" alt="foto perfil">
+            <img src="img/1709596755143.jpg" alt="foto perfil">
         </div>
         <div class="formacion">
             <h3>Formación:</h3>
