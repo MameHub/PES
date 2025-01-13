@@ -4,11 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio 1</title>
 </head>
 <body>
     <form action="procesa.php" method="post">
-        <input type="text">
+        <input type="text" name="name" placeholder="nombre">
+        <input type="text" name="surname" placeholder="apellidos">
+        <br>
+        <input type="email" name="email" placeholder="email">
+        <input type="number" name="phone" placeholder="telefono">
+        <br>
+        <p>Nivel de estudios</p>
+        <input type="radio" name="studies" id="primaria" value="primaria">
+        <label for="primaria">primaria</label>
+        <input type="radio" name="studies" id="secundaria" value="secundaria">
+        <label for="secundaria">secundaria</label>
+        <input type="radio" name="studies" id="bachillerato" value="bachillerato">
+        <label for="bachillerato">bachillerato</label>
+        <br>
+        <input type="radio" name="studies" id="medio" value="medio">
+        <label for="medio">grado medio</label>
+        <input type="radio" name="studies" id="superior" value="superior">
+        <label for="superior">grado superior</label>
+        <input type="radio" name="studies" id="grado" value="grado">
+        <label for="grado">grado universitario</label>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
     </form>
 </body>
 </html>

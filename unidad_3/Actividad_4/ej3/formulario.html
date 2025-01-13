@@ -1,3 +1,7 @@
+<!--
+Formulario para crear un currículum que incluya: Campos de texto, grupo de botones de opción, casilla de verificación,
+lista de selección única, lista de selección múltiple, botón de validación, botón de imagen, botón de reset, etc.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +10,22 @@
     <title>Ejercicio 3</title>
 </head>
 <body>
-    <p>
-        Formulario para crear un currículum que incluya: Campos de texto, grupo de botones de opción, casilla de verificación, lista de selección única, lista de selección múltiple,
-        botón de validación, botón de imagen, botón de reset, etc.
-    </p>
     <form action="procesa.php" method="post">
+        <label for="">Nombre: </label>
         <input type="text" name="name" id="name">
+        <label for="">Apellidos: </label>
         <input type="text" name="surname" id="surname">
+        <label for="">Email: </label>
         <input type="email" name="email" id="email">
+        <br>
+        <label for="">Imagen: </label>
+        <input type="file" name="image">
+        <label for="">Sexo: </label>
+        <input type="radio" name="sex" value="man"> Hombre
+        <input type="radio" name="sex" value="woman"> Mujer
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
     </form>
 </body>
 </html>
