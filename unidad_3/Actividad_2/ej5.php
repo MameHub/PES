@@ -3,6 +3,8 @@
 Dado el mes y año almacenados en variables, escribir un programa que muestre el calendario mensual correspondiente. Marcar el día actual en verde y los festivos en rojo.
 */
 
+$mes = 6;
+$anno = 1997;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +15,7 @@ Dado el mes y año almacenados en variables, escribir un programa que muestre el
 </head>
 <body>
 <?php
-    //<td></td>
+    
 ?>
 </body>
 </html>
