@@ -7,4 +7,4 @@ A continuación, se muestra un enlace para acceeder a un pdf en drive con la act
 
 ## Recuperación actividad evaluable
 A continuación, se muestra un enlace para acceeder a un pdf en drive con la reacuperación ed la actividad evaluable:   
-[Documento PDF](https://docs.google.com/document/d/1JyrpwUZys-zheTI5TBvGi4Gs68GicyOqiS_JNLiktUw/edit?usp=sharing)
+[Documento PDF](https://docs.google.com/document/d/1JyrpwUZys-zheTI5TBvGi4Gs68GicyOqiS_JNLiktUw/edit?usp=sharing)  DOCUMENTO PDF
