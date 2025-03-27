@@ -1,0 +1,18 @@
+.tablero {
+    border: 1px black solid;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+}
+
+.negro {
+    border: 1px black solid;
+    background-color: gray;
+}
+
+.blanco {
+    border: 1px black solid;
+    background-color: white;
+}
