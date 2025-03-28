@@ -1,3 +1,7 @@
+.juego {
+    display: grid;
+}
+
 .tablero {
     border: 1px black solid;
 }

@@ -8,12 +8,27 @@
 </head>
 <body>
 
+<header>
+
+    <h1>Tablero ajedrez</h1>
+    <hr>
+
+</header>
+
+<main>
+
     <?php
 
     $letras = ["a","b","c","d","e","f","g","h"];
     $numeros = [1,2,3,4,5,6,7,8];
+
+    echo '<div class="juego">';
     
     echo '<table class="tablero">';
+
+    foreach ($numeros as $columnas) {
+        echo '<p>',$columnas,'</p>';
+    };
     
     // FILAS
     for($i = 0; $i < 8; $i++) {
@@ -37,14 +52,33 @@
         echo '</tr>';
 
     }
+
+    echo '<tr>';
+
+    echo '<p>';
+    foreach ($letras as $fila) {
+        echo '<td>',$fila,'</td>';
+    }
+    echo '</p>';
+
+    echo '</tr>';
     
     echo '</table>';
 
-    // POSICIÓN LETRAS
-    // foreach ($array as $valor) {
-    //     echo '<p>',$valor,'</p>';
-    // };
+    echo '</div>';
 
     ?>
+
+</main>
+
+<footer>
+
+    <hr>
+    <h2>Ejercicio nx tablero ajedrez</h2>
+    <h3>Álvaro Cañas González</h3>
+    <h3>Programación en entorno servidor</h3>
+
+</footer>
+
 </body>
 </html>
