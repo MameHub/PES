@@ -45,6 +45,6 @@
     //     echo '<p>',$valor,'</p>';
     // };
 
-    ?>
+    ?>hola
 </body>
 </html>
