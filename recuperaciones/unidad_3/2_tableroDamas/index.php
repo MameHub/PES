@@ -10,7 +10,7 @@
 
 <header>
 
-    <h1>Tablero ajedrez</h1>
+    <h1>Tablero damas</h1>
     <hr>
 
 </header>
@@ -76,8 +76,8 @@
 <footer>
 
     <hr>
-    <h2>Actividad 1. Tablero de ajedrez</h2>
-    <a href="https://github.com/MameHub/PES/tree/main/tableroAjedrez" target="_blank">Enlace a github</a>
+    <h2>Actividad 2. Tablero de damas</h2>
+    <a href="" target="_blank">Enlace a github</a>
     <h3>Álvaro Cañas González</h3>
     <h3>Programación en entorno servidor</h3>
 

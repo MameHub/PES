@@ -77,7 +77,7 @@
 
     <hr>
     <h2>Actividad 1. Tablero de ajedrez</h2>
-    <a href="https://github.com/MameHub/PES/tree/main/tableroAjedrez" target="_blank">Enlace a github</a>
+    <a href="https://github.com/MameHub/PES/tree/main/recuperaciones/unidad_3/1_tableroAjedrez" target="_blank">Enlace a github</a>
     <h3>Álvaro Cañas González</h3>
     <h3>Programación en entorno servidor</h3>
 
