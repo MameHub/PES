@@ -10,10 +10,21 @@ td {
 
 .negro {
     border: 1px black solid;
-    background-color: gray;
+    background-color: black;
 }
 
 .blanco {
     border: 1px black solid;
     background-color: white;
+}
+
+.fichaRoja {
+    color: red;
+    font-size: 30px;
+}
+
+.fichaNegra {
+    color: black;
+    text-shadow: 0px 0px 5px white;
+    font-size: 30px;
 }

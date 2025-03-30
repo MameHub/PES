@@ -26,6 +26,7 @@
     
     echo '<tr><td></td>';
 
+    // LETRAS FILA
     foreach ($letras as $fila) {
         echo '<td>',$fila,'</td>';
     }
@@ -35,14 +36,15 @@
 
         echo '<tr>';
 
+        // NUMEROS COLUMNA
         echo '<td>',$numeros[$i],'</td>';
 
         // COLUMNAS
         for($j = 0; $j < 8; $j++) {
 
+            // COLOR CASILLA
             if($i % 2 == 0 && $j % 2 == 0 || $i % 2 != 0 && $j % 2 != 0) {
                 $color = "blanco";
-                
             } else {
                 $color = "negro";
             }
@@ -51,6 +53,7 @@
 
         }
 
+        // NUMEROS COLUMNA
         echo '<td>',$numeros[$i],'</td>';
         
         echo '</tr>';
@@ -61,6 +64,7 @@
 
     echo '<tr><td></td>';
 
+    // LETRAS FILA
     foreach ($letras as $fila) {
         echo '<td>',$fila,'</td>';
     }

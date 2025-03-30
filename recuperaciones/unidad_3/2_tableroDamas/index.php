@@ -42,12 +42,19 @@
 
             if($i % 2 == 0 && $j % 2 == 0 || $i % 2 != 0 && $j % 2 != 0) {
                 $color = "blanco";
-                
             } else {
                 $color = "negro";
             }
             
-            echo '<td class=',$color,'></td>';
+            echo '<td class=',$color,'>';
+
+            if ($color == "negro" && $i < 3) {
+                echo '<span class="fichaRoja">&#x25CF;</span>';
+            } elseif ($color == "negro" && $i > 4) {
+                echo '<span class="fichaNegra">&#x25CF</span>';
+            }
+
+            echo '</td>';
 
         }
 
