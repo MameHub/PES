@@ -84,7 +84,7 @@
 
     <hr>
     <h2>Actividad 2. Tablero de damas</h2>
-    <a href="" target="_blank">Enlace a github</a>
+    <a href="https://github.com/MameHub/PES/tree/main/recuperaciones/unidad_3/2_tableroDamas" target="_blank">Enlace a github</a>
     <h3>Álvaro Cañas González</h3>
     <h3>Programación en entorno servidor</h3>
 
