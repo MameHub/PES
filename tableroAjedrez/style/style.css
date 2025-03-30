@@ -1,14 +1,11 @@
-.juego {
-    display: grid;
-}
-
 .tablero {
     border: 1px black solid;
 }
 
 td {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
 }
 
 .negro {

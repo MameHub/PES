@@ -20,21 +20,23 @@
     <?php
 
     $letras = ["a","b","c","d","e","f","g","h"];
-    $numeros = [1,2,3,4,5,6,7,8];
-
-    echo '<div class="juego">';
+    $numeros = [8,7,6,5,4,3,2,1];
     
     echo '<table class="tablero">';
-
-    foreach ($numeros as $columnas) {
-        echo '<p>',$columnas,'</p>';
-    };
     
+    echo '<tr><td></td>';
+
+    foreach ($letras as $fila) {
+        echo '<td>',$fila,'</td>';
+    }
+
     // FILAS
     for($i = 0; $i < 8; $i++) {
 
         echo '<tr>';
-    
+
+        echo '<td>',$numeros[$i],'</td>';
+
         // COLUMNAS
         for($j = 0; $j < 8; $j++) {
 
@@ -45,9 +47,11 @@
                 $color = "negro";
             }
             
-            echo '<td class=',$color,'>',$j,'</td>';
+            echo '<td class=',$color,'></td>';
 
         }
+
+        echo '<td>',$numeros[$i],'</td>';
         
         echo '</tr>';
 
@@ -55,17 +59,15 @@
 
     echo '<tr>';
 
-    echo '<p>';
+    echo '<tr><td></td>';
+
     foreach ($letras as $fila) {
         echo '<td>',$fila,'</td>';
     }
-    echo '</p>';
 
     echo '</tr>';
     
     echo '</table>';
-
-    echo '</div>';
 
     ?>
 
@@ -74,7 +76,7 @@
 <footer>
 
     <hr>
-    <h2>Ejercicio nx tablero ajedrez</h2>
+    <h2>Actividad 1. Tablero de ajedrez</h2>
     <h3>Álvaro Cañas González</h3>
     <h3>Programación en entorno servidor</h3>
 
