@@ -40,6 +40,7 @@
         // COLUMNAS
         for($j = 0; $j < 8; $j++) {
 
+            // COLOR CASILLA
             if($i % 2 == 0 && $j % 2 == 0 || $i % 2 != 0 && $j % 2 != 0) {
                 $color = "blanco";
             } else {
@@ -48,6 +49,7 @@
             
             echo '<td class=',$color,'>';
 
+            // FICHAS
             if ($color == "negro" && $i < 3) {
                 echo '<span class="fichaRoja">&#x25CF;</span>';
             } elseif ($color == "negro" && $i > 4) {
