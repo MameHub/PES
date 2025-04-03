@@ -3,7 +3,7 @@
 // Variables.
 $anno = date('Y');
 $mes = date('m');
-$dias;
+$dias = cal_days_in_month(CAL_GREGORIAN, $mes, $anno);
 $diasSemana = ["lunes", "martes", "miercoles", "jueves", "viernes", "sábado", "domingo"];
 
 ?>
@@ -47,12 +47,20 @@ $diasSemana = ["lunes", "martes", "miercoles", "jueves", "viernes", "sábado", "
                 echo 'b';
             }
 
-            for ($i=1; $i <= $nDiasMes; $i++) { 
+            for ($i=1; $i <= $nDiasMes; $i++) {
                 echo $i;
                 if ($i == 7) {
                     echo '</br>';
                 }
             }
+
+            // for ($i = 0; $i <= cal_days_in_month(CAL_GREGORIAN, $mes, $anno); $i++) {
+            //     echo '$i';
+            // }
+
+            
+            echo $diasMes;
+
 
         ?>
 
