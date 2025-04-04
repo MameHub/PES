@@ -1,5 +1,8 @@
 <?php
 
+$factorial = 5;
+$resultado = 1;
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +17,11 @@
 
     <?php
     
-    
+    for ($i=1; $i <= $factorial; $i++) { 
+        $resultado *= $i;
+    }
+
+    echo $resultado
     
     ?>
 

@@ -1,5 +1,7 @@
 <?php
 
+$n = 91;
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +16,10 @@
 
     <?php
     
-    
+    for ($i=0; $i <= 10; $i++) { 
+        echo "$n · $i = ", ($n * $i);
+        echo '<br/>';
+    }
     
     ?>
 
