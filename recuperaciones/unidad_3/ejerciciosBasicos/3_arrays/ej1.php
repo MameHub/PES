@@ -1,6 +1,19 @@
 <?php
     
-    
+    # Array multidimensional asociativo.
+    $array =
+    # Primer array
+    ["Meses del año" => ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+    # Segundo array
+    "Tablero barcos" => ["Fila" => ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"],
+    "Columna" => ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]],
+    # Tercer array
+    "Notas 2 DAW" => [],
+    # Cuarto array
+    "Verbos irregulares inglés" => ["To awake", "To be", "To beat", "To become", "To begin", "To bend", "To bet", "To bind", "To bite", "To bleed", "To blow", "To break", "To bring", "To build", "To burn", "To buy", "To catch", "To come", "To cost", "To cut", "To choose", "To deal", "To dig", "To do", "To draw", "To dream"],
+    # Quinto array
+    "Información continentes" => []
+    ];
     
 ?>
 
@@ -13,7 +26,7 @@
 </head>
 <body>
     <p>Definir un array que permita almacenar y mostrar la siguiente información</p>
-    <ol>
+    <ol type="a">
         <li>Meses del año</li>
         <li>Tablero para jugar al juego de los barcos</li>
         <li>Nota de los alumnos de 2º DAW para el módulo DWES</li>
