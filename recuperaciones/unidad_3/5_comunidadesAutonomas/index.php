@@ -20,15 +20,18 @@ $comunidades = [
     ['La Rioja' => ['La rioja']], 
     ['Ceuta' => ['Ceuta']], 
     ['Melilla' => ['Melilla']], 
-    ['Islas Baleares' => ['Ibiza', 'Mallorca', 'Menorca']]
-    // ['Islas Canarias' =>
-    // ['Las Palmas' => ['Fuerteventura', 'Gran Canaria', 'Lanzarote']],
-    // ['Santa Cruz de Tenerife' => ['El Hierro', 'La Gomera', 'La Palma', 'Tenerife']]],
+    ['Islas Baleares' => ['Ibiza', 'Mallorca', 'Menorca']],
+    ['Islas Canarias' => ['Fuerteventura', 'Gran Canaria', 'Lanzarote', 'El Hierro', 'La Gomera', 'La Palma', 'Tenerife']]
 ];
 
 # Comprobación de envío de formulario
-if (!isset($_POST['submit'])) {
-    
+$procesaFormulario = false;
+if (isset($_POST['enviar'])) {
+    $procesaFormulario = true;
+}
+
+if ($procesaFormulario) {
+    echo rand($comunidades(0), end($comunidades));
 }
 
 ?>
@@ -48,6 +51,15 @@ if (!isset($_POST['submit'])) {
     <main>
         
     <form action="">
+        
+    <?php
+    
+    
+    // $n = rand($comunidades(0), end($comunidades));
+
+    // echo $comunidades[$n];
+
+    ?>
             
         <select>
 
@@ -57,8 +69,8 @@ if (!isset($_POST['submit'])) {
                 
                 foreach ($comunidades as $comunidad) {
                     foreach ($comunidad as $nombre => $provincias) {
-                        foreach ($provincias as $provinicia) {
-                            echo '<option>',$provinicia,'</option>';
+                        foreach ($provincias as $provincia) {
+                            echo '<option>',$provincia,'</option>';
                         }
                     }
                 }
@@ -68,7 +80,7 @@ if (!isset($_POST['submit'])) {
             <!-- </option> -->
 
         </select>
-        <button type="submit">Enviar</button>
+        <button type="submit" name="enviar">Enviar</button>
 
     </form>
 
