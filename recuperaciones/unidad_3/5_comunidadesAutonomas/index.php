@@ -20,10 +20,10 @@ $comunidades = [
     ['La Rioja' => ['La rioja']], 
     ['Ceuta' => ['Ceuta']], 
     ['Melilla' => ['Melilla']], 
-    ['Islas Baleares' => ['Ibiza', 'Mallorca', 'Menorca']], 
-    ['Islas Canarias' =>
-    ['Las Palmas' => ['Fuerteventura', 'Gran Canaria', 'Lanzarote']],
-    ['Santa Cruz de Tenerife' => ['El Hierro', 'La Gomera', 'La Palma', 'Tenerife']]],
+    ['Islas Baleares' => ['Ibiza', 'Mallorca', 'Menorca']]
+    // ['Islas Canarias' =>
+    // ['Las Palmas' => ['Fuerteventura', 'Gran Canaria', 'Lanzarote']],
+    // ['Santa Cruz de Tenerife' => ['El Hierro', 'La Gomera', 'La Palma', 'Tenerife']]],
 ];
 
 # Comprobación de envío de formulario
@@ -51,15 +51,21 @@ if (!isset($_POST['submit'])) {
             
         <select>
 
-            <option>
+            <!-- <option> -->
 
                 <?php
                 
-                
+                foreach ($comunidades as $comunidad) {
+                    foreach ($comunidad as $nombre => $provincias) {
+                        foreach ($provincias as $provinicia) {
+                            echo '<option>',$provinicia,'</option>';
+                        }
+                    }
+                }
 
                 ?>
 
-            </option>
+            <!-- </option> -->
 
         </select>
         <button type="submit">Enviar</button>
