@@ -81,7 +81,6 @@ function comprobacion($comunidades, $comunidadSeleccionada, $provinciaMostrada) 
 
 # Comprobación de envío de formulario.
 if (isset($_POST['enviar'])) {
-    // echo $_POST['validate'];
     comprobacion($comunidades, $_POST['comunidadSeleccionada'], $_POST['validate']);
 }
 
