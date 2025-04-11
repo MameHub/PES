@@ -66,13 +66,14 @@ function comprobacion($comunidades, $comunidadSeleccionada, $provinciaMostrada) 
                     break;
                 }
             }
+            break;
         }
     }
 
     if ($provinciaEncontrada) {
         echo '<p style="color: green">"ENHORABUENA! Has acertado"</p>';
     } else {
-        echo '<p style="color: red">Lo siento, ',$provincia,' no se encuentra en ',$comunidad,'.</p>';
+        echo '<p style="color: red">Lo siento, ',$provinciaMostrada,' no se encuentra en ',$comunidadSeleccionada,'.</p>';
     }
     
 
@@ -129,6 +130,7 @@ if (isset($_POST['enviar'])) {
         <hr>
         <h2>Álvaro Cañas</h2>
         <h3>Programació en entorno servidor</h3>
+        <a href="https://github.com/MameHub/PES/tree/main/recuperaciones/unidad_3/5_comunidadesAutonomas/index.php" target="_blank">Enlace a GitHub</a>
     </footer>
 
 </body>
