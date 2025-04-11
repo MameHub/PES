@@ -1,10 +1,16 @@
 <?php
 
+/**
+ * Comunidades autónomas y provincias.
+ * 
+ * @author Álvaro Cañas
+ */
+
 # LISTA DE COMUNIDADES AUTONOMAS CON SUS PROVINCIAS -> https://www.mundodeportivo.com/uncomo/educacion/articulo/cuantas-comunidades-autonomas-hay-en-espana-42821.html
+
 # Variables.
-# Clases estilos.
-$correcto = "green";
-$incorrecto = "red";
+$provinciaMostrada = "";
+
 # Array asociativo con las Comunidades autónomas y sus provincias.
 $comunidades = [
     'Andalucía' => ['Almería', 'Cádiz', 'Córdoba', 'Granada', 'Huelva', 'Jaén', 'Málaga', 'Sevilla'],
@@ -28,21 +34,54 @@ $comunidades = [
     'Islas Canarias' => ['Fuerteventura', 'Gran Canaria', 'Lanzarote', 'El Hierro', 'La Gomera', 'La Palma', 'Tenerife']
 ];
 
-# Comprobación de envío de formulario
-$procesaFormulario = false;
-if (isset($_POST['enviar'])) {
-    $procesaFormulario = true;
+/**
+ * Obtenemos una provincia aleatoria.
+ * 
+ * @param array $array multidimensional asociativo con las comunidades autonomas y sus provincias.
+ * @return String Provincia aleatoria del array.
+ */
+function provinciaAleatoria($array) {
+    $comunidadAleatoria = array_rand($array, 1);
+    $array[$comunidadAleatoria];
+    return $array[$comunidadAleatoria][array_rand($array[$comunidadAleatoria])];
 }
-# Recepción de formulario
-if ($procesaFormulario) {
-    # Comprobamos que el formulario haya sido enviado para evitar fallos en la recarga[...].
-    if ($_POST['validate'] == 1) {
-        # Mostramos el resultado.
 
+/**
+ * Comprobamos y mostramos por pantalla que la provincia pertenece a la comunidad autónoma seleccionada, modificamos la clase para el diseño.
+ * 
+ * @param array $comunidades Array multidimensional asociativo con todas las comunidades y sus provincias.
+ * @param string $comunidadSeleccionada Comunidad autónoma seleccionada.
+ * @param string $provinciaMostrada Provincia generada aleatoriamente.
+ * @return string Devuelve una cadena de texto informando si el usuario ha acertado o se ha equivocado y modifica la clase de la etiqueta que muestra el resultado.
+ */
+function comprobacion($comunidades, $comunidadSeleccionada, $provinciaMostrada) {
 
-        # echo '<p>',$provinciaRandom,'</p>';
-        echo $_POST;
+    $provinciaEncontrada = false;
+    
+    foreach ($comunidades as $comunidad => $provincias) {
+        if ($comunidad == $comunidadSeleccionada) {
+            foreach ($provincias as $provincia) {
+                if ($provincia == $provinciaMostrada) {
+                    $provinciaEncontrada = true;
+                    break;
+                }
+            }
+        }
     }
+
+    if ($provinciaEncontrada) {
+        echo '<p style="color: green">"ENHORABUENA! Has acertado"</p>';
+    } else {
+        echo '<p style="color: red">Lo siento, ',$provincia,' no se encuentra en ',$comunidad,'.</p>';
+    }
+    
+
+}
+
+# Comprobación de envío de formulario.
+if (isset($_POST['enviar'])) {
+    // echo $_POST['validate'];
+    comprobacion($comunidades, $_POST['comunidadSeleccionada'], $_POST['validate']);
 }
 
 ?>
@@ -56,43 +95,40 @@ if ($procesaFormulario) {
 <body>
 
     <header>
-
+        <h1>Relaciona la provincia con su comunidad autónoma</h1>
+        <hr>
     </header>
 
     <main>
-        
-    <form action="">
-        
+    <form method="post">
+
     <?php
-
+    # Obtenemos una provincia de forma aleatoria y la almacenamos en una variable.
+    $provinciaMostrada = provinciaAleatoria($comunidades);
     # Mostramos una provicia de forma aleatoria.
-    echo '<label>',array_rand($comunidades, 1),'</label>' #Corregir, solo muestra comunidades en vez de provincias.
-
+    echo '<label><b>',$provinciaMostrada,'</b> se encuentra en: </label>';
     ?>
-            
-        <select>
+
+        <select name="comunidadSeleccionada">
 
                 <?php
-                
                 # Mostramos un desplegable con las comunidades autónomas.
                 foreach ($comunidades as $comunidad => $provincia) {
                     echo '<option>',$comunidad,'</option>';
                 }
-
                 ?>
 
         </select>
-
-        <input type="hidden" name="validate" value="1">
-
+        <input type="hidden" name="validate" value=<?php echo $provinciaMostrada ?>>
         <button type="submit" name="enviar">Enviar</button>
 
     </form>
-
     </main>
 
     <footer>
-
+        <hr>
+        <h2>Álvaro Cañas</h2>
+        <h3>Programació en entorno servidor</h3>
     </footer>
 
 </body>
