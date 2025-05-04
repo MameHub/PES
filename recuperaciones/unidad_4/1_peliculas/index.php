@@ -62,7 +62,8 @@ sort($aGeneros);
                 <!-- Generamos el menú mediante un array que contiene los generos previamente procesado para ordenadrlo alfabéticamente y evitar los repetidos. -->
                 <?php
                     foreach ($aGeneros as $generos) {
-                        echo '<li><a href="">',$generos,'</a></li>';
+                        # Mandamos en la url el genero seleccionado.
+                        echo '<li><a href="preferencias.php?genero=',urlencode($generos),'">',$generos,'</a></li>';
                     }
                 ?>
             </ul>
@@ -75,14 +76,29 @@ sort($aGeneros);
     <?php
     
     foreach ($aPeliculas as $peliculas) {
-        // if ($peliculas['anno'] == 2025) {
-        if (in_array('Accion', $peliculas['genero'])) {
-            echo '<div class="pelicula">';
-            echo '<img src="',$peliculas['caratula'],'" alt="Caratula ',$peliculas['titulo'],'" width=240>';
-            echo '<h2>',$peliculas['titulo'],'</h2>';
-            echo '</div>';
-            echo '</br>';
-        }
+
+        if (isset($_COOKIE['genero_seleccionado'])) {
+            $generoSeleccionado = $_COOKIE['genero_seleccionado'];
+            
+                if (in_array($generoSeleccionado, $peliculas['genero'])) {
+                    echo '<div class="pelicula">';
+                    echo '<img src="',$peliculas['caratula'],'" alt="Caratula ',$peliculas['titulo'],'" width=240>';
+                    echo '<h2>',$peliculas['titulo'],'</h2>';
+                    echo '</div>';
+                    echo '</br>';
+                }
+
+        } else {
+
+                if ($peliculas['anno'] == $year) {
+                    echo '<div class="pelicula">';
+                    echo '<img src="',$peliculas['caratula'],'" alt="Caratula ',$peliculas['titulo'],'" width=240>';
+                    echo '<h2>',$peliculas['titulo'],'</h2>';
+                    echo '</div>';
+                    echo '</br>';
+                }
+
+            }
     }
 
     ?>
