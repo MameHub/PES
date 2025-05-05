@@ -15,11 +15,12 @@
 
 # VARIABLES.
 $year = 2025;
+$settings = false;
 $aPeliculas = [
     ['titulo' => 'El último samurai', 'anno' => 2003, 'genero' => ['Aventuras', 'Accion', 'Drama'], 'caratula' => 'https://pics.filmaffinity.com/the_last_samurai-270445769-large.jpg'],
     ['titulo' => 'Intocable', 'anno' => 2011, 'genero' => ['Comedia', 'Drama'], 'caratula' => 'https://pics.filmaffinity.com/Intocable-218166359-large.jpg'],
     ['titulo' => 'Interestelar', 'anno' => 2014, 'genero' => ['Ciencia ficcion', 'Aventuras', 'Drama'], 'caratula' => 'https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_.jpg'],
-    ['titulo' => 'Chappie', 'anno' => 2015, 'genero' => ['Accion', 'Ciencia Ficcion'], 'caratula' => 'https://m.media-amazon.com/images/M/MV5BMTUyNTI4NTIwNl5BMl5BanBnXkFtZTgwMjQ4MTI0NDE@._V1_.jpg'],
+    ['titulo' => 'Chappie', 'anno' => 2015, 'genero' => ['Accion', 'Ciencia ficcion'], 'caratula' => 'https://m.media-amazon.com/images/M/MV5BMTUyNTI4NTIwNl5BMl5BanBnXkFtZTgwMjQ4MTI0NDE@._V1_.jpg'],
     ['titulo' => 'Joker', 'anno' => 2019, 'genero' => ['Thriller', 'Crimen'], 'caratula' => 'https://pics.filmaffinity.com/joker-790658206-large.jpg'],
     ['titulo' => 'Robots', 'anno' => 2005, 'genero' => ['Infantil', 'Aventuras'], 'caratula' => 'https://pics.filmaffinity.com/Robots-967630798-large.jpg'],
     ['titulo' => 'The Dark Knight', 'anno' => 2008, 'genero' => ['Thriller', 'Accion'], 'caratula' => 'https://pics.filmaffinity.com/the_dark_knight-102763119-large.jpg'],
@@ -32,6 +33,7 @@ $aPeliculas = [
     ['titulo' => 'Scarface', 'anno' => 1983, 'genero' => ['Drama', 'Mafia'], 'caratula' => 'https://pics.filmaffinity.com/scarface-798722679-large.jpg'],
     ['titulo' => 'El corredor del laberito', 'anno' => 2014, 'genero' => ['Ciencia ficcion', 'Accion'], 'caratula' => 'https://pics.filmaffinity.com/the_maze_runner-377064363-large.jpg']
 ];
+# Array con los generos de las películas.
 $aGeneros = array();
 
 # Obtenemos los géneros de las películas.
@@ -55,7 +57,14 @@ sort($aGeneros);
 </head>
 <body>
     <header>
-        <h1>Cinemax</h1>
+        <div class="titleSetting">
+            <h1>Cinemax</h1>
+            <a href="./preferencias.php">
+                <button type="submit">
+                    <img src="./img/settings.png" alt="Engranaje preferencias" width="30px"/>
+                </button>
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="">Inicio</a></li>
