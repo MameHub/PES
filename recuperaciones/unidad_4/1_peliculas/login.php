@@ -8,7 +8,14 @@
 <body>
     <div class="login">
         <form action="index.php" method="post">
-            
+            <div class="user">
+                <label for="user">Usuario</label>
+                <input type="text" name="" id="user" placeholder="Usuario">
+            </div>
+            <div class="pass">
+                <label for="pass">Contraseña</label>
+                <input type="password" name="" id="pass" placeholder="Contraseña">
+            </div>
         </form>
     </div>
 </body>
