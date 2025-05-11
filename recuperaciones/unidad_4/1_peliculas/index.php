@@ -45,6 +45,16 @@ $aGeneros = array_unique($aGeneros);
 # Ordenaos alfabéticamente.
 sort($aGeneros);
 
+# Generamos la cookie para mostrar los generos.
+if (isset($_GET['genero'])) {
+    
+    # Almacenamos dicho genero en una variable.
+    $generoSeleccionado = $_GET['genero'];
+    
+    # Creamos la cookie con dicho genero durante una hora.
+    setcookie("genero_seleccionado", $generoSeleccionado, time() + 3600);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +82,7 @@ sort($aGeneros);
                 <?php
                     foreach ($aGeneros as $generos) {
                         # Mandamos en la url el genero seleccionado.
-                        echo '<li><a href="preferencias.php?genero=',urlencode($generos),'">',$generos,'</a></li>';
+                        echo '<li><a href="index.php?genero=',urlencode($generos),'">',$generos,'</a></li>';
                     }
                 ?>
             </ul>
