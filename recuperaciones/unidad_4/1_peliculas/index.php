@@ -46,14 +46,14 @@ $aGeneros = array_unique($aGeneros);
 sort($aGeneros);
 
 # Generamos la cookie para mostrar los generos.
-if (isset($_GET['genero'])) {
+// if (isset($_GET['genero'])) {
     
-    # Almacenamos dicho genero en una variable.
-    $generoSeleccionado = $_GET['genero'];
+//     # Almacenamos dicho genero en una variable.
+//     $generoSeleccionado = $_GET['genero'];
     
-    # Creamos la cookie con dicho genero durante una hora.
-    setcookie("genero_seleccionado", $generoSeleccionado, time() + 3600);
-}
+//     # Creamos la cookie con dicho genero durante una hora.
+//     setcookie("genero_seleccionado", $generoSeleccionado);
+// }
 
 ?>
 
@@ -96,28 +96,28 @@ if (isset($_GET['genero'])) {
     
     foreach ($aPeliculas as $peliculas) {
 
-        if (isset($_COOKIE['genero_seleccionado'])) {
-            $generoSeleccionado = $_COOKIE['genero_seleccionado'];
-            
-                if (in_array($generoSeleccionado, $peliculas['genero'])) {
-                    echo '<div class="pelicula">';
-                    echo '<img src="',$peliculas['caratula'],'" alt="Caratula ',$peliculas['titulo'],'" width=240>';
-                    echo '<h2>',$peliculas['titulo'],'</h2>';
-                    echo '</div>';
-                    echo '</br>';
+        if (isset($_GET['genero'])) {
+                $generoSeleccionado = $_GET['genero'];
+                
+                    if (in_array($generoSeleccionado, $peliculas['genero'])) {
+                        echo '<div class="pelicula">';
+                        echo '<img src="',$peliculas['caratula'],'" alt="Caratula ',$peliculas['titulo'],'" width=240>';
+                        echo '<h2>',$peliculas['titulo'],'</h2>';
+                        echo '</div>';
+                        echo '</br>';
+                    }
+    
+            } else {
+    
+                    if ($peliculas['anno'] == $year) {
+                        echo '<div class="pelicula">';
+                        echo '<img src="',$peliculas['caratula'],'" alt="Caratula ',$peliculas['titulo'],'" width=240>';
+                        echo '<h2>',$peliculas['titulo'],'</h2>';
+                        echo '</div>';
+                        echo '</br>';
+                    }
+    
                 }
-
-        } else {
-
-                if ($peliculas['anno'] == $year) {
-                    echo '<div class="pelicula">';
-                    echo '<img src="',$peliculas['caratula'],'" alt="Caratula ',$peliculas['titulo'],'" width=240>';
-                    echo '<h2>',$peliculas['titulo'],'</h2>';
-                    echo '</div>';
-                    echo '</br>';
-                }
-
-            }
     }
 
     ?>
