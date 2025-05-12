@@ -45,16 +45,6 @@ $aGeneros = array_unique($aGeneros);
 # Ordenaos alfabéticamente.
 sort($aGeneros);
 
-# Generamos la cookie para mostrar los generos.
-// if (isset($_GET['genero'])) {
-    
-//     # Almacenamos dicho genero en una variable.
-//     $generoSeleccionado = $_GET['genero'];
-    
-//     # Creamos la cookie con dicho genero durante una hora.
-//     setcookie("genero_seleccionado", $generoSeleccionado);
-// }
-
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +67,7 @@ sort($aGeneros);
         </div>
         <nav>
             <ul>
-                <li><a href="">Inicio</a></li>
+                <li><a href="<?php  ?>">Inicio</a></li>
                 <!-- Generamos el menú mediante un array que contiene los generos previamente procesado para ordenadrlo alfabéticamente y evitar los repetidos. -->
                 <?php
                     foreach ($aGeneros as $generos) {
